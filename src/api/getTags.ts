@@ -1,7 +1,7 @@
 import { StackExchangeUrl } from "@/config";
-import { type Response, type StackExchangeError, type Tag } from "@/types";
+import { type ResponseAPI, type StackExchangeError, type Tag } from "@/types";
 
-export const getTags = async (): Promise<Response<Tag[]>> => {
+export const getTags = async (): Promise<ResponseAPI<Tag[]>> => {
 	try {
 		const response = await fetch(
 			`${StackExchangeUrl}/tags?order=desc&sort=popular&site=stackoverflow`,

@@ -1,4 +1,5 @@
 export type Tag = {
+	[key: string]: string | number | boolean;
 	has_synonyms: boolean;
 	is_moderator_only: boolean;
 	is_required: boolean;
@@ -12,4 +13,4 @@ export type StackExchangeError = {
 	error_name: string;
 };
 
-export type Response<T> = { ok: true; data: T } | { ok: false; message: string };
+export type ResponseAPI<T> = { ok: true; data: T } | { ok: false; message: string };
