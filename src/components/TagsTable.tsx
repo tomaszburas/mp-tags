@@ -106,7 +106,7 @@ export const TagsTable = () => {
 				</TableColumn>
 			</TableHeader>
 			<TableBody
-				emptyContent="No rows to display."
+				emptyContent={!isLoading && "No rows to display."}
 				items={items}
 				isLoading={isLoading}
 				loadingContent={<Spinner />}
