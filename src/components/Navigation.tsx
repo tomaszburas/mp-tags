@@ -1,7 +1,7 @@
 export const Navigation = () => {
 	return (
-		<section className="my-4">
-			<h1>Stack Exchange Tags</h1>
-		</section>
+		<header>
+			<h1 className="text-lg font-bold">Stack Exchange Tags</h1>
+		</header>
 	);
 };
