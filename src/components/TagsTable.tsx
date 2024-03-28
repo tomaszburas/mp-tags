@@ -29,6 +29,7 @@ const Form = ({
 	setRowsPerPage: Dispatch<SetStateAction<number>>;
 }) => {
 	const [value, setValue] = useState<string>("");
+	const isInvalid = value !== "" && (Number(value) > max || Number(value) < 1) ? true : false;
 	const handleOnSubmit = useCallback(
 		(e: SyntheticEvent) => {
 			e.preventDefault();
@@ -46,6 +47,8 @@ const Form = ({
 				placeholder="Tags per page"
 				value={value}
 				onChange={(e) => setValue(e.target.value)}
+				isInvalid={isInvalid}
+				errorMessage={isInvalid && ` Please enter a number between 1 and ${max}`}
 			/>
 			<Button type="submit" color="secondary">
 				Save
