@@ -19,7 +19,6 @@
 		"import/no-mutable-exports": "error",
 
 		"import/no-cycle": "error",
-		// "import/no-default-export": ["error", { "ignorePatterns": "./src/stories" }],
 
 		// allow {} even though it's unsafe but comes handy
 		"@typescript-eslint/ban-types": [

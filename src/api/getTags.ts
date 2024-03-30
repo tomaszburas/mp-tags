@@ -1,5 +1,5 @@
-import { StackExchangeUrl } from "@/config";
-import { type ResponseAPI, type StackExchangeError, type Tag } from "@/types";
+import { StackExchangeUrl } from "../config";
+import { type ResponseAPI, type StackExchangeError, type Tag } from "../types";
 
 export const getTags = async (): Promise<ResponseAPI<Tag[]>> => {
 	try {

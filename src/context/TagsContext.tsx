@@ -1,7 +1,7 @@
 import { createContext, useState, type ReactNode } from "react";
 import { type AsyncListData, useAsyncList } from "@react-stately/data";
-import { getTags } from "@/api/getTags";
-import { type Tag } from "@/types";
+import { getTags } from "../api/getTags";
+import { type Tag } from "../types";
 
 type Props = {
 	children: ReactNode;

@@ -19,7 +19,7 @@ import {
 	type SetStateAction,
 	type SyntheticEvent,
 } from "react";
-import { useTags } from "@/hooks/useTags";
+import { useTags } from "../hooks/useTags";
 
 const Form = ({
 	max,
@@ -42,6 +42,7 @@ const Form = ({
 	return (
 		<form onSubmit={handleOnSubmit} className="flex gap-4">
 			<Input
+				disabled={!max}
 				type="number"
 				min={1}
 				max={max}
@@ -107,7 +108,7 @@ export const TagsTable = () => {
 				</TableColumn>
 			</TableHeader>
 			<TableBody
-				emptyContent={!isLoading && "No rows to display."}
+				emptyContent={!isLoading && "No tags to display."}
 				items={items}
 				isLoading={isLoading}
 				loadingContent={<Spinner />}
